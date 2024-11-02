@@ -9,7 +9,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
 
     <section class="create-todo">
-      <h3>Create a TODO</h3>
+      <h3>CREATE A TODO</h3>
       <form id="new-todo">
         <h4>What do you wanna do today?</h4>
         <input 
@@ -48,7 +48,23 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
   <section class="todo-list">
     <h3>TODO LIST</h3>
-    
+    <div class="list" id="todo-list">
+      <div class="todo-item">
+        <label>
+          <input type="checkbox">
+          <span class="bubble" business></span>
+        </label>
+
+        <div class="todo-content">
+          <input type="text" value="Make a video" readonly>
+        </div>
+
+          <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </div>
+      </div>
+    </div>
   </section>
   
 `
