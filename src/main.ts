@@ -1,11 +1,55 @@
-import './style.css'
+import './css/style.css'
 import testFunc from './todoapp/todo'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <h1 class="test">Welcome to My Todo App! </h1>
-    <p id='godhelpme'></p>
-  </div>
+  <main>
+    <section class="greeting">
+      <h2 class="title">Welcome, <input type="text" id="name" placeholder="name here">
+      </h2>
+    </section>
+
+    <section class="create-todo">
+      <h3>Create a TODO</h3>
+      <form id="new-todo">
+        <h4>What do you wanna do today?</h4>
+        <input 
+          type="text" 
+          name="todo-input" 
+          id="todo-input" 
+          placeholder="e.g., Call Dad">
+        
+        <h4>Pick a category</h4>
+        <div class="todo-option">
+
+          <label>
+            <input 
+              type="radio" 
+              name="category" 
+              id="category1" 
+              value="business">
+            <span class="bubble business"></span>
+            <div>Business</div>
+          </label>
+
+          <label>
+            <input 
+              type="radio" 
+              name="category" 
+              id="category2" 
+              value="personal">
+            <span class="bubble business"></span>
+            <div>Personal</div>
+          </label>
+        </div>
+
+        <input type="submit" value="Add todo">
+      </form>
+  </main>
+
+  <section class="todo-list">
+    <h3>TODO LIST</h3>
+    
+  </section>
   
 `
 testFunc(document.querySelector<HTMLParagraphElement>('#godhelpme')!)
