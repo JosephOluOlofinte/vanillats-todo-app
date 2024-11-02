@@ -1,7 +1,9 @@
 import './css/style.css'
 import testFunc from './todoapp/todo'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+const app = document.querySelector<HTMLDivElement>('#app')!;
+
+app.innerHTML = `
   <main>
     <section class="greeting">
       <h2 class="title">Welcome, <input type="text" id="name" placeholder="name here">
