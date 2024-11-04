@@ -67,7 +67,6 @@ app.innerHTML = `
           </div>
       </div>
     </div>
-  </section>
-  
+  </section>  
 `
 testFunc(document.querySelector<HTMLParagraphElement>('#godhelpme')!)
