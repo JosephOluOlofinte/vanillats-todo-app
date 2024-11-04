@@ -19,9 +19,13 @@
   body {
     margin: 0;
     padding: 0;
+    height: 100vh;
     box-sizing: border-box;
     background-color: var(--primary);
     color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   input:not([type="radio"]):not([type="checkbox"]), button {

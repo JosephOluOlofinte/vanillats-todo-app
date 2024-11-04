@@ -6,7 +6,7 @@ const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = `
   <main>
     <section class="greeting">
-      <h2 class="title">Welcome, <input type="text" id="name" placeholder="name here">
+      <h2 class="title">Welcome, <input type="text" id="name" placeholder="Name here">
       </h2>
     </section>
 

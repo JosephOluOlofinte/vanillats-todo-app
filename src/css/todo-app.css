@@ -1,9 +1,9 @@
   
   #app {
-    width: 100%;
-    max-width: 550px;
+    box-sizing: border-box;
+    width: 550px;
     height: 90vh;
-    margin: auto;
+    padding-top: 10px;
     background-color: var(--secondary);
     border-radius: 30px;
   }
@@ -22,4 +22,17 @@
 .greeting .title input {
     color: var(--title-color);
     font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.create-todo input[type="text"] {
+    display: block;
+    width: 90%;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+    color: var(--title-color);
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
 }
