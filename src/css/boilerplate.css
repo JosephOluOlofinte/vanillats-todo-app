@@ -2,26 +2,70 @@
     font-family: 'Libre Franklin', system-ui, Avenir, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color:  #242424;  
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    --primary: rgb(236, 240, 243);
+    --accent: rgb(119, 103, 228);
+    --secondary: rgb(224, 232, 238);
+    --title-color: rgb(24, 47, 88);
+    --text-color: rgb(95, 107, 127);
+    --gray: #888;
+    --danger: #ff5b57;
+    
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-top: -1px -1px 3px rgba(255, 255, 255, 0.917);
+
+    --business-glow: 0px 0px 4px rgba(119, 103, 228, 0.75);
+    --personal-glow: 0px 0px 4px rgba(236, 240, 243, 0.75);
   }
   
   body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    box-sizing: border-box;
+    background-color: var(--primary);
+    color: var(--text-color);
   }
 
+  input:not([type="radio"]):not([type="checkbox"]), button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+  }
+
+  section {
+    margin-block: 2rem;
+    padding-inline: 1.5rem;
+  }
+
+  h1, h2, h3 {
+    color: var(--title-color);
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h4 {
+    color: var(--gray);
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5;
+  }
+
+  
   #app {
     width: 100%;
     max-width: 600px;
     height: 100vh;
     margin: auto;
     padding: 2rem;
-    background-color: #646cff;
   }
 
   button {
