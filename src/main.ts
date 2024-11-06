@@ -39,7 +39,7 @@ app.innerHTML = `
               name="category" 
               id="category2" 
               value="personal">
-            <span class="bubble business"></span>
+            <span class="bubble personal"></span>
             <div>Personal</div>
           </label>
         </div>

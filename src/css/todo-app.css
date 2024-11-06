@@ -71,3 +71,7 @@ input[type="checkbox"] {
   border: 2px solid var(--accent);
   box-shadow: var(--business-glow);
 }
+
+.bubble.personal {
+  border-color: var(--secondary);
+}
