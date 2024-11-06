@@ -36,3 +36,38 @@
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
 }
+
+.create-todo .todo-option {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.create-todo .todo-option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: var(--business-glow);
+}
