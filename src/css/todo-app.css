@@ -23,6 +23,7 @@
     color: var(--title-color);
     font-size: 1.5rem;
     font-weight: 700;
+    font-family: 'Lora', serif;
 }
 
 .create-todo input[type="text"] {
@@ -35,6 +36,7 @@
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .create-todo .todo-option {
@@ -67,11 +69,13 @@ input[type="checkbox"] {
   justify-content: center;
   width: 20px;
   height: 20px;
+  margin-bottom: 0.5rem;
   border-radius: 50%;
   border: 2px solid var(--accent);
   box-shadow: var(--business-glow);
 }
 
 .bubble.personal {
-  border-color: var(--secondary);
+  border-color: var(--personal);
+  box-shadow: var(--personal-glow);
 }

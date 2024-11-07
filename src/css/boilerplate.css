@@ -1,9 +1,10 @@
 :root {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-weight: 400;
     --primary: rgb(236, 240, 243);
     --accent: rgb(119, 103, 228);
     --secondary: rgb(224, 232, 238);
+    --personal: rgba(34, 67, 123, 0.715);
     --title-color: rgb(24, 47, 88);
     --text-color: rgb(95, 107, 127);
     --gray: #888;
@@ -13,7 +14,7 @@
     --shadow-top: -1px -1px 3px rgba(255, 255, 255, 0.917);
 
     --business-glow: 0px 0px 4px rgba(119, 103, 228, 0.75);
-    --personal-glow: 0px 0px 4px rgba(224, 232, 238, 0.75);
+    --personal-glow: 0px 0px 4px rgba(24, 47, 88, 0.75);
   }
   
   body {
@@ -43,6 +44,7 @@
 
   h1, h2, h3 {
     color: var(--title-color);
+    font-family: 'Lora', serif;
   }
 
   h3 {
