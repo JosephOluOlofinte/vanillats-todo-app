@@ -20,7 +20,7 @@
   body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
     background-color: var(--primary);
     color: var(--text-color);
@@ -44,7 +44,7 @@
 
   h1, h2, h3 {
     color: var(--title-color);
-    font-family: 'Lora', serif;
+    /* font-family: 'Lora', serif; */
   }
 
   h3 {

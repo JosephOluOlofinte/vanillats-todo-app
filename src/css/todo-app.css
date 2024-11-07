@@ -2,7 +2,7 @@
   #app {
     box-sizing: border-box;
     width: 550px;
-    height: 90vh;
+    min-height: 90vh;
     padding-top: 10px;
     background-color: var(--secondary);
     border-radius: 30px;
@@ -78,4 +78,58 @@ input[type="checkbox"] {
 .bubble.personal {
   border-color: var(--personal);
   box-shadow: var(--personal-glow);
+}
+
+.bubble::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  background-color: var(--accent);
+  box-shadow: var(--business-glow);
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+.bubble.personal::after {
+  background-color: var(--personal);
+  box-shadow: var(--personal-glow);
+}
+
+input:checked ~ .bubble::after {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+.create-todo input[type="submit"]{
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  color: white;
+  background-color: var(--accent);
+  border-radius: 0.5rem;
+  box-shadow: var(--business-glow);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.create-todo input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.todo-list .list{
+  margin: 1rem 0;
+}
+
+.todo-list .todo-item {
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
 }
