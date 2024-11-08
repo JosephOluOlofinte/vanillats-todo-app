@@ -168,3 +168,14 @@ input:checked ~ .bubble::after {
   color: var(--text-color);
 }
 
+.todo-item.done .todo-content input {
+  text-decoration: line-through;
+  color: rgba(128, 128, 128, 0.7);
+}
+
+.todo-list h3::after {
+  content: "";
+  height: 2px;
+  width: 10px;
+  background-color: var(--accent);
+}

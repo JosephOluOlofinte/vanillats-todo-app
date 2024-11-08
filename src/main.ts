@@ -6,14 +6,13 @@ const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = `
   <main>
     <section class="greeting">
-      <h2 class="title">Welcome, <input type="text" id="name" placeholder="Name here">
+      <h2 class="title">Hey, <input type="text" id="name" placeholder="Name here">
       </h2>
     </section>
 
     <section class="create-todo">
-      <h3>CREATE A TODO</h3>
       <form id="new-todo">
-        <h4>What do you wanna do today?</h4>
+        <h3>Got something to achieve today?</h3>
         <input 
           type="text" 
           name="todo-input" 
@@ -49,9 +48,10 @@ app.innerHTML = `
   </main>
 
   <section class="todo-list">
-    <h3>TODO LIST</h3>
+    <h3>Tasks on your list</h3>
     <div class="list" id="todo-list">
-      <div class="todo-item">
+
+<!--      <div class="todo-item done">
         <label>
           <input type="checkbox">
           <span class="bubble business"></span>
@@ -81,7 +81,7 @@ app.innerHTML = `
             <button class="edit">Edit</button>
             <button class="delete">Delete</button>
           </div>
-      </div>
+      </div> -->
     </div>
   </section>  
 `
