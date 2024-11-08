@@ -69,7 +69,7 @@ input[type="checkbox"] {
   justify-content: center;
   width: 20px;
   height: 20px;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   border-radius: 50%;
   border: 2px solid var(--accent);
   box-shadow: var(--business-glow);
@@ -103,6 +103,10 @@ input:checked ~ .bubble::after {
   opacity: 1;
 }
 
+.todo-option label div {
+  margin-top: 0.75rem;
+} 
+
 .create-todo input[type="submit"]{
   display: block;
   width: 100%;
@@ -133,3 +137,34 @@ input:checked ~ .bubble::after {
   box-shadow: var(--shadow);
   margin-bottom: 1rem;
 }
+
+.todo-item label {
+  display: block;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.todo-item .todo-content {
+  flex: 1 1 0%;
+}
+
+.todo-item .todo-content input {
+  color: var(--text-color);
+  font-size: 1.125rem;
+  font-family: "poppins";
+}
+
+.todo-item .actions {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item .actions .edit {
+  background-color: var(--accent);
+  color: whitesmoke;
+}
+
+.todo-item .actions .delete {
+  color: var(--text-color);
+}
+
