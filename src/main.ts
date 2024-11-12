@@ -1,5 +1,4 @@
 import './css/style.css'
-import testFunc from './todoapp/todo'
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
@@ -85,4 +84,3 @@ app.innerHTML = `
     </div>
   </section>  
 `
-testFunc(document.querySelector<HTMLParagraphElement>('#godhelpme')!)

@@ -1,12 +1,8 @@
 
 
-const testVar: string = 'This is a test variable created in todo.ts file';
+// window.addEventListener('load', () => {
+//     let todos = JSON.parse(localStorage.getItem('todos')) || []
+// })
 
-console.log(testVar);
-
-
-function testFunc(element: HTMLParagraphElement) {
-    element.innerHTML = `I don't really know what I'm doing. ${testVar}`;
-};
-
-export default testFunc;
+// Storing all input in a variables.
+const visitorName = document.querySelector<HTMLInputElement>('#name')!;
