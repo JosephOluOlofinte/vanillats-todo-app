@@ -5,9 +5,9 @@ const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = `
   <main>
     <section class="greeting">
-      <h2 class="title">Hey, <input type="text" id="name" placeholder="Name here">
+      <h2 class="title">Hey, <input type="text" name="name" id="name" placeholder="Name here">
       </h2>
-      <div class="displayPic"></div>
+      <div class="displayPic"><input type="file" name="displayPic" id="displayPic" accept="image/png, image/jpeg"></div>
     </section>
 
     <section class="create-todo">

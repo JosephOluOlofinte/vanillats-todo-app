@@ -38,6 +38,18 @@
   border: 1px solid var(--accent);
   box-shadow: var(--shadow);
   border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.displayPic input[type="file"] {
+  overflow: hidden;
+  color: var(--title-color);
+  font-size: 0.5rem;
+  font-weight: 700;
+  font-family: 'Lora', serif;
 }
 
 .create-todo input[type="text"] {
