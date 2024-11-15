@@ -8,6 +8,12 @@
     border-radius: 30px;
   }
 
+.greeting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 .greeting .title {
     display: flex;
 }
@@ -24,6 +30,14 @@
     font-size: 1.5rem;
     font-weight: 700;
     font-family: 'Lora', serif;
+}
+
+.displayPic {
+  height: 70px;
+  width: 70px;
+  border: 1px solid var(--accent);
+  box-shadow: var(--shadow);
+  border-radius: 50%;
 }
 
 .create-todo input[type="text"] {

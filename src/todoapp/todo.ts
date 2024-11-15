@@ -6,3 +6,6 @@
 
 // Storing all input in a variables.
 const visitorName = document.querySelector<HTMLInputElement>('#name')!;
+console.log(visitorName);
+
+
