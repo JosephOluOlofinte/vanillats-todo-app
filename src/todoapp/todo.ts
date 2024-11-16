@@ -1,10 +1,5 @@
 
-
-// window.addEventListener('load', () => {
-//     let todos = JSON.parse(localStorage.getItem('todos')) || []
-// })
-
-// Storing all input in a variables.
+// Get required HTML elements from the page
 const visitorName = document.querySelector<HTMLInputElement>('#name')!;
 console.log(visitorName);
 
@@ -25,3 +20,21 @@ console.log(personal);
 
 const todoList = document.querySelector<HTMLDivElement>('#todo-list')!;
 console.log(todoList);
+
+
+type VisitorDetailsType = {
+    visitorName: string;
+    displayPic: string;
+};
+
+type TodoListType = {
+    todoinput: string;
+    todoCategory: string;
+    isCompleted: boolean;
+};
+
+const visitorDetails: VisitorDetailsType[] = [];
+const todos: TodoListType[] = []
+
+console.log(visitorDetails);
+console.log(todos);
