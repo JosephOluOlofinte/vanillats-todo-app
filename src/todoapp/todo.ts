@@ -1,11 +1,12 @@
 
-// Get required HTML elements from the page
+// Get required elements for user details from the page
 const visitorName = document.querySelector<HTMLInputElement>('#name')!;
 console.log(visitorName);
 
 const displayPic = document.querySelector<HTMLInputElement>('#displayPic')!;
 console.log(displayPic);
 
+// get todo elements from the page
 const newTodo = document.querySelector<HTMLFormElement>('#new-todo')!;
 console.log(newTodo);
 
@@ -17,6 +18,9 @@ console.log(business);
 
 const personal = document.querySelector<HTMLInputElement>('category2')!;
 console.log(personal);
+
+// Grab element to list todo from the page
+
 
 const todoList = document.querySelector<HTMLDivElement>('#todo-list')!;
 console.log(todoList);
@@ -36,5 +40,14 @@ type TodoListType = {
 const visitorDetails: VisitorDetailsType[] = [];
 const todos: TodoListType[] = []
 
-console.log(visitorDetails);
-console.log(todos);
+newTodo?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const todoDesc = todoInput?.value;
+    if (todoDesc) {
+      console.log(todoDesc);
+        newTodo.value = '';
+        return;
+    } 
+
+    alert('Please enter a todo list for today.')
+})
