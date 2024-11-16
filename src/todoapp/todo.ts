@@ -10,13 +10,13 @@ console.log(displayPic);
 const newTodo = document.querySelector<HTMLFormElement>('#new-todo')!;
 console.log(newTodo);
 
-const todoInput = document.querySelector<HTMLInputElement>('todo-input')!;
+const todoInput = document.querySelector<HTMLInputElement>('#todo-input')!;
 console.log(todoInput)
 
-const business = document.querySelector<HTMLInputElement>('category1')!;
+const business = document.querySelector<HTMLInputElement>('#category1')!;
 console.log(business);
 
-const personal = document.querySelector<HTMLInputElement>('category2')!;
+const personal = document.querySelector<HTMLInputElement>('#category2')!;
 console.log(personal);
 
 // Grab element to list todo from the page
@@ -24,7 +24,6 @@ console.log(personal);
 
 const todoList = document.querySelector<HTMLDivElement>('#todo-list')!;
 console.log(todoList);
-
 
 type VisitorDetailsType = {
     visitorName: string;
@@ -43,11 +42,19 @@ const todos: TodoListType[] = []
 newTodo?.addEventListener('submit', (event) => {
     event.preventDefault();
     const todoDesc = todoInput?.value;
-    if (todoDesc) {
+    if (todoDesc && business || personal) {
       console.log(todoDesc);
         newTodo.value = '';
         return;
     } 
 
     alert('Please enter a todo list for today.')
+})
+
+const username = localStorage.getItem('name') || '';
+
+visitorName.value = username;
+
+visitorName.addEventListener('change', (event: string): void => {
+    localStorage.setItem('username', event.target.value);
 })
