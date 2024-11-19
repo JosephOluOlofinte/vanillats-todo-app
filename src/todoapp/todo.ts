@@ -26,35 +26,81 @@ const todoList = document.querySelector<HTMLDivElement>('#todo-list')!;
 console.log(todoList);
 
 type VisitorDetailsType = {
-    visitorName: string;
-    displayPic: string;
+    visitorName?: string;
+    displayPic?: string;
 };
 
 type TodoListType = {
-    todoinput: string;
+    todoInput: string;
     todoCategory: string;
     isCompleted: boolean;
 };
 
+// create arrays for user details and todolist
 const visitorDetails: VisitorDetailsType[] = [];
 const todos: TodoListType[] = []
+
+// add username to list
+visitorName.addEventListener('change', (event) => {
+    event.preventDefault;
+    const username = visitorName.value;
+
+    const userInfo: VisitorDetailsType = {
+        visitorName: username,
+    }
+    visitorDetails.push(userInfo);
+    console.log(userInfo);
+})
+
+// add display picture to list
+displayPic.addEventListener('change', (event) => {
+    event.preventDefault;
+    const userImage = displayPic.value;
+
+    const userInfo: VisitorDetailsType = {
+        displayPic: userImage,
+    }
+    visitorDetails.push(userInfo);
+    console.log(userInfo);
+})
 
 newTodo?.addEventListener('submit', (event) => {
     event.preventDefault();
     const todoDesc = todoInput?.value;
-    if (todoDesc && business || personal) {
-      console.log(todoDesc);
-        newTodo.value = '';
+    const personalTodo = personal?.value;
+    const businessTodo = business?.value;
+
+    if (todoDesc) {
+        // add task to list
+        const task: TodoListType = {
+            todoInput: todoDesc,
+            todoCategory: personalTodo || businessTodo,
+            isCompleted: false,
+        };
+
+        addTask(task);
+        console.log(task); //remove later
+
+        // display task on screen
+
+        // update local storage
+        todoInput.value = '';
         return;
     } 
+    alert('Please enter a todo task for today.');
 
-    alert('Please enter a todo list for today.')
+
 })
 
-const username = localStorage.getItem('name') || '';
+function addTask(task: TodoListType): void{
+    todos.push(task);
+}
 
-visitorName.value = username;
+// const username = localStorage.getItem('name') || '';
 
-visitorName.addEventListener('change', (event: string): void => {
-    localStorage.setItem('username', event.target.value);
-})
+// visitorName.value = username;
+
+// visitorName.addEventListener('change', (event) => {
+//     localStorage.setItem('username', event.target.value);
+// })
+
