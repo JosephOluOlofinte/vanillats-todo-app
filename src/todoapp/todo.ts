@@ -50,18 +50,27 @@ visitorName.addEventListener('change', (event) => {
     }
     visitorDetails.push(userInfo);
     console.log(userInfo);
+
+    // add username to local storage
+    localStorage.setItem('visitorDetails', JSON.stringify(visitorDetails));
 })
 
 // add display picture to list
 displayPic.addEventListener('change', (event) => {
     event.preventDefault;
+    const username = visitorName.value;
     const userImage = displayPic.value;
 
     const userInfo: VisitorDetailsType = {
+        visitorName: username,
         displayPic: userImage,
     }
-    visitorDetails.push(userInfo);
+    // visitorDetails.push(userInfo);
+    visitorDetails[0] = userInfo;
     console.log(userInfo);
+
+    // add displayPic to local storage
+    localStorage.setItem('visitorDetails', JSON.stringify(visitorDetails));
 })
 
 newTodo?.addEventListener('submit', (event) => {
